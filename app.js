@@ -1,0 +1,1 @@
+var Chatty = angular.module('Chatty',[]);
