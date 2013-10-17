@@ -14,13 +14,13 @@
 	</head>
 
 	<body>
-		<div class="container">
+		<div class="container" ng-controller="MessageController">
 			<h2>Chatty - <span class="em">"Chat it up!"</span></h2>
-			<div class="messages" ng-controller="MessageController" ng-repeat="message in chatMessages">
-				<h3>{{message.messageText}}</h3>
+			<div class="messages" >
+				<h4 ng-repeat="message in chatMessages">{{message.messageText}}</h4>
 			</div>
-			<div class="input">
-				<input type="text" autofocus />
+			<div class="input" >
+				<input type="text" autofocus ng-model="newChat" ng-enter="addMessage()" />
 			</div>
 		</div>
 	</body>
