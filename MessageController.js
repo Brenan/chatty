@@ -10,8 +10,7 @@ Chatty.controller("MessageController", function($scope,$http){
 
 	$scope.addMessage = function(){
 		var message = {
-				messageText : $scope.newChat,
-				timeCreated : new Date();
+				messageText : $scope.newChat
 			};
 		$http.post('http://localhost:8000/', message).success(function() {
 				$scope.newChat="";
