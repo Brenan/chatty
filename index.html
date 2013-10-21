@@ -17,7 +17,7 @@
 		<div class="container" ng-controller="MessageController">
 			<h2>Chatty - <span class="em">"Chat it up!"</span></h2>
 			<div class="messages" >
-				<h4 ng-repeat="message in chatMessages">{{message.messageText}} - {{message.createTime}}</h4>
+				<h4 ng-repeat="message in chatMessages">{{message.messageText}} - {{message.createTime |date}}</h4>
 			</div>
 			<div class="input" >
 				<input type="text" autofocus ng-model="newChat" ng-enter="addMessage()" />
